@@ -581,7 +581,7 @@ func (a *App) getSSOProvider(service string) (einterfaces.OAuthProvider, *model.
 	}
 	providerType := service
 	if strings.Contains(*sso.Scope, OpenIDScope) {
-		providerType = model.ServiceOpenid
+		// providerType = model.ServiceOpenid
 	}
 	provider := einterfaces.GetOAuthProvider(providerType)
 	if provider == nil {
